@@ -1,0 +1,4 @@
+#!/bin/sh
+MASTER_PID_FILE=master-0.pid
+[ -f ${MASTER_PID_FILE} ] && pkill -F ${MASTER_PID_FILE} && rm ${MASTER_PID_FILE} && echo "Master killed" || echo "Can't stop master"
+[ -f ${MASTER_PID_FILE} ] && rm ${MASTER_PID_FILE}

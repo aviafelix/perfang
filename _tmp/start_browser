@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import subprocess
+
+def main():
+    process = subprocess.Popen(
+	[
+	    '/usr/bin/google-chrome',
+	    '--remote-debugging-port=9222',
+	    '--user-data-dir=remote-test',
+	    '--start-maximized',
+	],
+	shell=False, stdin=None, stdout=None, stderr=None, close_fds=True,
+    )
+
+if __name__ == '__main__':
+    main()

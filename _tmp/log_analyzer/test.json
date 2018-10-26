@@ -1,0 +1,47 @@
+{
+    /* Тестовый конфигурационный файл */
+    "timeoutsec": 5,
+    // Ещё один комментарий
+    "handler": "adminhandler.py",
+    // Общие настройки
+    "настройка_1": "bebebe",
+    "variable_x": "zoozia",
+
+    /* Настройки layzer */
+    "layzer": {
+        "if": "then"
+        
+    },
+
+    "command_line": [
+        {
+            "args": ["--log-level", "-ll"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт уровень подробности логов",
+                "default": "logging.DEBUG",
+                // Кстати, как бы задать функцию или определёный раньше список?
+                "choices": "LEVELS.keys()"
+            }
+        },
+
+        {
+            "args": ["--log-file", "-lf"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт путь к файлу логов",
+                "default": "./tmp/log.log"
+            }
+        },
+
+        {
+            "args": ["--config"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт путь к конфигурации",
+                // ???
+                "default": "./layzer.config",
+            }
+        }
+    ]
+}

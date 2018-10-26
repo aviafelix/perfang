@@ -1,0 +1,9 @@
+{
+    "logs": {
+        "log-level": "warining",
+        // "log-file": "dev-warnings.log",
+        // "config": "log-config.config",
+    }
+
+    ""
+}

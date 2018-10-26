@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Restarting servers..."
+./_stop_servers_local
+./_start_servers_local

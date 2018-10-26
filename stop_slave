@@ -1,0 +1,4 @@
+#!/bin/sh
+SLAVE_PID_FILE=slave-1.pid
+[ -f ${SLAVE_PID_FILE} ] && pkill -F ${SLAVE_PID_FILE} && rm ${SLAVE_PID_FILE} && echo "Slave killed" || echo "Can't stop slave"
+[ -f ${SLAVE_PID_FILE} ] && rm ${SLAVE_PID_FILE}

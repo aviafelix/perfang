@@ -1,0 +1,32 @@
+{
+    "command_line": [
+        {
+            "args": ["--log-level", "-ll"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт уровень подробности логов",
+                "default": "debug",
+                "choices": "LEVELS.keys()" // Лучше этот аргумент перенести в тело программы, и менять его через настройки (конфигурация, командная строка)
+            }
+        },
+
+        {
+            "args": ["--log-file", "-lf"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт путь к файлу логов",
+                "default": "./tmp/log.log"
+            }
+        },
+
+        {
+            "args": ["--config"],
+            "opts": {
+                "required": "False",
+                "help": "Задаёт путь к конфигурации",
+                // ???
+                "default": "./layzer.config"
+            }
+        }
+    ]
+}

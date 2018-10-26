@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Stopping servers..."
+./stop_master
+./stop_slave

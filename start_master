@@ -1,0 +1,18 @@
+#!/bin/sh
+export FLASK_DEBUG=1
+export FLASK_APP=server/master.py
+export PYTHONIOENCODING=utf-8
+export PYTHONPATH=$(pwd)
+export PID_FILE=master-0.pid
+if [ -f $PID_FILE ]; then
+	echo "Master already running"
+	exit 1
+fi
+echo "[ Perfang Started (Master Server) ]"
+(
+echo Python Path: $PYTHONPATH
+# python3 -m flask run --host=0.0.0.0 --port=5000
+# python3 server/master.py & echo $! > $PID_FILE
+python3 server/master.py &
+exit
+) >> _master-server.log 2>&1

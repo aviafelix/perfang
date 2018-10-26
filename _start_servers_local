@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Starting servers..."
+./start_master
+./start_slave
